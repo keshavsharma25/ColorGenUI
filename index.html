@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/app.js" defer></script>
     <title>Color Palette Generator</title>
   </head>
   <body>
@@ -17,7 +18,7 @@
             <div class="upload-container">
               <form id="myForm" method="post">
                 <div class="upload-btn-wrapper">
-                  <button class="btn">Upload a file</button>
+                  <button id="upload-btn" class="btn">Upload a file</button>
                   <input
                     type="file"
                     name="myfile"
@@ -29,23 +30,25 @@
               </form>
             </div>
 
-            <img
-              id="output"
-              src="./images/g7rnhyvmrhf71.jpg"
-              class="img-source"
-            />
+            <img id="output" src="./public/src.jpg" class="img-source" />
           </div>
 
           <div class="color-container">
-            <div class="color-box" id="color1"></div>
-            <div class="color-box" id="color2"></div>
-            <div class="color-box" id="color3"></div>
-            <div class="color-box" id="color4"></div>
+            <div class="color-box" id="color1">
+              <button class="copy-btn" id="cpy-btn-1">Copy</button>
+            </div>
+            <div class="color-box" id="color2">
+              <button class="copy-btn" id="cpy-btn-2">Copy</button>
+            </div>
+            <div class="color-box" id="color3">
+              <button class="copy-btn" id="cpy-btn-3">Copy</button>
+            </div>
+            <div class="color-box" id="color4">
+              <button class="copy-btn" id="cpy-btn-4">Copy</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-    <script src="./js/app.js"></script>
   </body>
 </html>

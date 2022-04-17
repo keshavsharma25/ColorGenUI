@@ -17,8 +17,8 @@ body {
   font-size: 50px;
   font-weight: 800;
   background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #ff5722);
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 .main-container {
@@ -37,12 +37,6 @@ body {
   position: absolute;
   top: 10px;
   left: 10px;
-}
-
-.upload-container:hover {
-  box-shadow: -3px 4px 21px -4px rgba(0, 0, 0, 0.57);
-  -webkit-box-shadow: -3px 4px 21px -4px rgba(0, 0, 0, 0.57);
-  -moz-box-shadow: -3px 4px 21px -4px rgba(0, 0, 0, 0.57);
 }
 
 .color-image-container {
@@ -73,10 +67,16 @@ body {
   border: none;
 }
 
+.image-container:hover {
+  box-shadow: -3px 4px 21px -4px rgba(0, 0, 0, 0.57);
+  -webkit-box-shadow: -3px 4px 21px -4px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: -3px 4px 21px -4px rgba(0, 0, 0, 0.57);
+}
+
 .color-box {
+  position: relative;
   width: 300px;
   height: 12rem;
-  cursor: pointer;
   border-radius: 20px;
   transition: all 0.2s;
 }
@@ -98,6 +98,7 @@ body {
   position: relative;
   overflow: hidden;
   display: inline-block;
+  cursor: pointer;
 }
 
 .btn {
@@ -118,22 +119,67 @@ body {
   cursor: pointer;
 }
 
+.copy-btn {
+  /* visibility: hidden; */
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+  border-style: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Farfetch Basis', 'Helvetica Neue', Arial, sans-serif;
+  background: transparent;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  max-width: none;
+  min-height: 44px;
+  min-width: 10px;
+  outline: none;
+  overflow: hidden;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  opacity: 0;
+}
+
+.copy-btn:hover,
+.copy-btn:focus {
+  /* visibility: visible; */
+  color: rgb(255, 255, 255);
+  font-style: bold;
+  opacity: 1;
+  transition: all 0.2s;
+}
+
 #inpFile {
   cursor: pointer;
 }
 
 #color1 {
-  background-color: #0e1437;
+  background-color: transparent;
 }
 
 #color2 {
-  background-color: #d7a880;
+  background-color: transparent;
 }
 
 #color3 {
-  background-color: #624d67;
+  background-color: transparent;
 }
 
 #color4 {
-  background-color: #a27676;
+  background-color: transparent;
 }
