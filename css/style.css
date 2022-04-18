@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Inter:wght@400;500&display=swap');
 
 * {
   box-sizing: border-box;
@@ -15,15 +15,30 @@ body {
   align-items: center;
   font-family: 'Fredoka One', cursive;
   font-size: 50px;
+  margin-top: 30px;
+  margin-bottom: 20px;
   font-weight: 800;
+  background-clip: text;
   background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #ff5722);
-  -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subheader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  font-style: italic;
+  margin-top: 0px;
+  margin-bottom: 20px;
 }
 
 .main-container {
   position: relative;
-  padding: 30px 30px;
+  padding: 20px 30px;
   margin-left: 25px;
   margin-right: 25px;
   border-radius: 20px;
@@ -40,7 +55,7 @@ body {
 }
 
 .color-image-container {
-  height: 50rem;
+  height: 46rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,7 +66,7 @@ body {
   display: flex;
   height: 100%;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: nowrap;
   margin-left: 3em;
@@ -65,20 +80,24 @@ body {
   border-radius: 20px;
   overflow: hidden;
   border: none;
-}
-
-.image-container:hover {
-  box-shadow: -3px 4px 21px -4px rgba(0, 0, 0, 0.57);
-  -webkit-box-shadow: -3px 4px 21px -4px rgba(0, 0, 0, 0.57);
-  -moz-box-shadow: -3px 4px 21px -4px rgba(0, 0, 0, 0.57);
+  box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.43);
+  -webkit-box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.43);
 }
 
 .color-box {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 300px;
-  height: 12rem;
+  height: 11rem;
   border-radius: 20px;
   transition: all 0.2s;
+  box-shadow: -2px 1px 9px 1px rgba(0, 0, 0, 0.43);
+  -webkit-box-shadow: -2px 1px 9px 1px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: -2px 1px 9px 1px rgba(0, 0, 0, 0.43);
 }
 
 .color-box:hover {
@@ -98,14 +117,18 @@ body {
   position: relative;
   overflow: hidden;
   display: inline-block;
+}
+
+#inpFile::-webkit-file-upload-button {
   cursor: pointer;
 }
 
 .btn {
   color: #e2e2e2;
   background-color: #202124;
+  border-color: #202124;
   padding: 8px 20px;
-  border-radius: 8px;
+  border-radius: 6px;
   font-size: 20px;
   font-weight: bold;
 }
@@ -116,14 +139,6 @@ body {
   left: 0;
   top: 0;
   opacity: 0;
-  cursor: pointer;
-}
-
-.color-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .copy-btn {
@@ -172,4 +187,39 @@ body {
 
 #color4 {
   background-color: #202124;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.footer-heart {
+  text-align: center;
+  font-family: open sans, sans-serif;
+  color: #e2e2e2;
+}
+
+.footer-heart a {
+  border-bottom: 1px solid #726c92;
+  color: #726c92;
+  padding-bottom: 0.25em;
+  text-decoration: none;
+}
+
+.footer-heart a:hover {
+  color: #2196f3;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23453886' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 20%;
+  border-bottom: 0;
+  padding-bottom: 0.3em;
+  text-decoration: none;
+}
+
+.emoji {
+  vertical-align: middle;
 }
