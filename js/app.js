@@ -57,6 +57,10 @@ function formdata () {
   })
 }
 
+function copyColor (color) {
+  navigator.clipboard.writeText(color)
+}
+
 const endPoint = 'https://colorgenapi.herokuapp.com/upload'
 // const endPoint = 'http://127.0.0.1:8000/upload'
 
@@ -65,17 +69,43 @@ const inpFile = document.getElementById('inpFile')
 
 var img = document.getElementById('output')
 
+var backgroundColors = ['#000000', '#000000', '#000000', '#000000']
+
 img.addEventListener('load', function () {
   try {
     formdata().then(formdata => {
       fetchColors(endPoint, formdata).then(colors => {
-        document.getElementById('color1').style.background = colors[0]
-        document.getElementById('color2').style.background = colors[1]
-        document.getElementById('color3').style.background = colors[2]
-        document.getElementById('color4').style.background = colors[3]
+        backgroundColors = colors
+
+        for (i = 1; i <= backgroundColors.length; i++) {
+          document.getElementById('color' + i).style.background =
+            backgroundColors[i - 1]
+          document.getElementById('cpy-btn-' + i).innerHTML =
+            backgroundColors[i - 1]
+        }
       })
     })
   } catch (error) {
     console.log('error', error)
   }
+})
+
+document.getElementById('color1').addEventListener('click', function () {
+  copyColor(backgroundColors[0])
+  console.log(backgroundColors[0])
+})
+
+document.getElementById('color2').addEventListener('click', function () {
+  copyColor(backgroundColors[1])
+  console.log(backgroundColors[1])
+})
+
+document.getElementById('color3').addEventListener('click', function () {
+  copyColor(backgroundColors[2])
+  console.log(backgroundColors[2])
+})
+
+document.getElementById('color4').addEventListener('click', function () {
+  copyColor(backgroundColors[3])
+  console.log(backgroundColors[3])
 })
