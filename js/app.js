@@ -62,7 +62,6 @@ function copyColor (color) {
 }
 
 const endPoint = 'https://colorgenapi.herokuapp.com/upload'
-// const endPoint = 'http://127.0.0.1:8000/upload'
 
 const myForm = document.getElementById('myForm')
 const inpFile = document.getElementById('inpFile')
