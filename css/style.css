@@ -147,8 +147,7 @@ body {
   opacity: 0.25;
 }
 
-.copy-btn:hover,
-.copy-btn:focus {
+.copy-btn:hover {
   color: rgb(255, 255, 255);
   font-style: bold;
   opacity: 1;
